@@ -8,4 +8,9 @@
 ```shell
 npm install jest --save-dev
 ````
-## 4. Create a test file
+## 4. Modify test-script in package.json
+```json
+  "scripts": {
+    "test": "jest"
+  },
+```
