@@ -45,13 +45,28 @@ describe("Testing with floats", () => {
   });
 });
 
+describe("Testing missing parameter", () => {
+  test("sum() throws an exception ", () => {
+    expect(() => sum()).toThrow("parameter missing");
+  });
+  test("sum() throws an exception ", () => {
+    expect(() => sum(1)).toThrow("parameter missing");
+  });
+});
 
-describe('Testing missing parameter', ()=>{
-    test('sum() throws an exception ', () => {
-      expect(()=>sum()).toThrow('parameter missing')
-    })
-    test('sum() throws an exception ', () => {
-        expect(()=>sum(1)).toThrow('parameter missing')
-      })
-    
-})
+describe("parameters are not numbers", () => {
+  const testValues = [
+    ["sum('1', '2')", "1", "2"],
+    ["sum(1, '2')", 1, "2"],
+    ["sum('1', 2)", "1", 2],
+    ["sum('a', 'b')", "a", "b"],
+    ["sum('', '')", "", ""],
+    ["sum(true, false)", true, false],
+    ["sum(true, true)", true, true],
+    ["sum(false, false)", false, false],
+    ["sum(false, true)", false, true],
+  ];
+  test.each(testValues)('%s throws "only numbers allowed"', (label, a, b) => {
+    expect(() => sum(a, b)).toThrow("only numbers allowed");
+  });
+});
