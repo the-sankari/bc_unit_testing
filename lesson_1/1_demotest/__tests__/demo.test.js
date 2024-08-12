@@ -21,6 +21,9 @@ afterAll(() => {
 });
 
 describe("This is group A", () => {
+  beforeEach(() => {
+    console.log("beforeEach: ", "run before each test in group A");
+  });
   test("first test in group A", () => {
     console.log("first test in group A");
   });
