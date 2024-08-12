@@ -16,3 +16,5 @@ npm install jest --save-dev
 ```
 
 ## 5. Create test folder named `__tests__`
+## 6. Write tests
+## 7. Run tests
