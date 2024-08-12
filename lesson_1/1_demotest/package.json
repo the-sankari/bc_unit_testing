@@ -1,0 +1,14 @@
+{
+  "name": "1_demotest",
+  "version": "1.0.0",
+  "description": "Unit testing lesson 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaiol",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
