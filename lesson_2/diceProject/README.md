@@ -30,9 +30,25 @@ If the dice hasn't been rolled, the number of dots is 0. After the dice has been
 - returns the number of dots ( dot count)
 
 ### **minimumValue**
-- returns the minimum mu,ber of dots. It should be 1.
+- returns the minimum mumber of dots. It should be 1.
 ### **maximumValue**
 - returns the maximum number of dots. It should be the upper bound.
+
+
+## Test cases
+- Test that the dice can be rolled
+- Test that the dice can be rolled multiple times
+- Test that the dice can not be rolled before it has been rolled
+- Test that the dice can not be rolled if it has been rolled before and the dot count is
+- Test that the dice can be rolled with a given upper bound
+
+- Test that the dice can be rolled with a default upper bound
+- Test that the dice can be rolled with an upper bound that is not a number
+- Test that the dice can be rolled with an upper bound that is not an integer
+- Test that the dice can be rolled with an upper bound that is too big
+- Test that the dice can be rolled with an upper bound that is too small
+- Test that the dice can be rolled with an upper bound that is not between 2 and 20
+
 
 
 <!--
