@@ -1,0 +1,14 @@
+{
+  "name": "diceproject",
+  "version": "1.0.0",
+  "description": "unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "kajol",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
