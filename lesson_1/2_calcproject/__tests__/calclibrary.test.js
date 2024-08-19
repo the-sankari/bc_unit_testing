@@ -16,7 +16,6 @@ describe("Testing sum with integers", () => {
     [0, -3, -3],
     [500, -500, 0],
     [1, 499, 500],
-    [1000, -500, 500],
   ];
   test.each(testValues)("sum(%s,%s) = %s", (a, b, result) => {
     expect(sum(a, b)).toBe(result);
@@ -33,9 +32,7 @@ describe("Testing with floats", () => {
     [0.5, 0.5, 1],
     [0.5, 3.5, 4],
     [0.5, -3.5, -3],
-    [500.5, -500.5, 0],
     [1.5, 499.5, 501],
-    [1000.5, -500.5, 500],
     [499.9, 500.0, 999.9],
     [-499.9, -500.0, -999.9],
     [-499.9, 500.0, 0.1],
@@ -68,5 +65,63 @@ describe("parameters are not numbers", () => {
   ];
   test.each(testValues)('%s throws "only numbers allowed"', (label, a, b) => {
     expect(() => sum(a, b)).toThrow("only numbers allowed");
+  });
+});
+
+const { subtract } = require("../calclibrary");
+
+describe("Testing subtract", () => {
+  describe("Testing subtract with integers", () => {
+    const testValues = [
+      [1, 1, 0],
+      [2, 3, -1],
+      [2, -3, 5],
+      [0, 0, 0],
+      [0, 1, -1],
+      [1, 0, 1],
+      [2, 1, 1],
+    ];
+    test.each(testValues)("subtract(%s,%s) = %s", (a, b, result) => {
+      expect(subtract(a, b)).toBe(result);
+    });
+  });
+  describe("Testing subtract with floats", () => {
+    const testValues = [
+      [1.5, 1.5, 0],
+      [2.5, 3.5, -1],
+      [2.5, -3.5, 6],
+      [0.5, 0.5, 0],
+      [0.5, 1.5, -1],
+      [1.5, 0.5, 1],
+      [2.5, 1.5, 1],
+    ];
+    test.each(testValues)("subtract(%s,%s) = %s", (a, b, result) => {
+      expect(subtract(a, b)).toBeCloseTo(result);
+    });
+  });
+  describe("Testing missing parameter", () => {
+    test("subtract() throws an exception ", () => {
+      expect(() => subtract()).toThrow("parameter missing");
+    });
+    test("subtract() throws an exception ", () => {
+      expect(() => subtract(1)).toThrow("parameter missing");
+    });
+  });
+  
+  describe("parameters are not numbers", () => {
+    const testValues = [
+      ["subtract('1', '2')", "1", "2"],
+      ["subtract(1, '2')", 1, "2"],
+      ["subtract('1', 2)", "1", 2],
+      ["subtract('a', 'b')", "a", "b"],
+      ["subtract('', '')", "", ""],
+      ["subtract(true, false)", true, false],
+      ["subtract(true, true)", true, true],
+      ["subtract(false, false)", false, false],
+      ["subtract(false, true)", false, true],
+    ];
+    test.each(testValues)('%s throws "only numbers allowed"', (label, a, b) => {
+      expect(() => subtract(a, b)).toThrow("only numbers allowed");
+    });
   });
 });

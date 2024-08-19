@@ -58,3 +58,26 @@ sum(-501, 1000) throws an exception `'numbers not between -500 and 500'`
 sum(1000, -501) throws an exception `'numbers not between -500 and 500'`
 sum(-501, -1000) throws an exception `'numbers not between -500 and 500'`
 sum(1000, -1000) throws an exception `'numbers not between -500 and 500'`
+
+### Test cases for suntract
+
+### substract with integers
+
+[1,1,0],
+[2, 3, -1],
+[2, -3, 5],
+[0, 0, 0],
+[0, 1, -1],
+[1, 0, 1],
+[2, 1, 1],
+
+### substract with floats
+[1.5, 1.5, 0],
+[2.5, 3.5, -1],
+[2.5, -3.5, 6],
+[0.5, 0.5, 0],
+[0.5, 1.5, -1],
+[1.5, 0.5, 1],
+[2.5, 1.5, 1],
+[2.5, -3.5, 5.5],
+

@@ -46,11 +46,30 @@ describe("This is group B", () => {
     });
   });
   describe("This is group B2 in B", () => {
-    test("test 3 in B", () => {
+    test("test 1 in B2", () => {
       console.log("test 1 in B2");
     });
-    test("test 4 in B", () => {
+    test("test 2 in B2", () => {
       console.log("test 2 in B2");
     });
   });
 });
+
+describe("test concatenation function", () => {
+  const concat = (partA, partB) => "" + partA + partB;
+  test('testing concat("first", "last") returns "firstlast"', () => {
+    expect(concat("first", "last")).toBe("firstlast");
+  });
+  test('testing concat(1,2) returns "12"', () => {
+    expect(concat(1, 2)).toBe('12');
+  });
+});
+
+describe('this test is for exception',()=>{
+    function testFunciton() {
+        throw new Error('Test exception');
+    }
+    test('function throws an exception', ()=>{
+        expect(()=>testFunciton())
+    })
+})
