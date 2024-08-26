@@ -31,3 +31,23 @@ initializes a dice with minimumValue 1 and maximumValue 6 and dot count 0.
     - dots to be < 6
     - dots >= 1
 (this should be repeated multiple times. We will check this later)
+
+2. Create a dice with upper bounds 2...20
+- roll the dice
+- expects:
+    - dots to be <= upper bound
+    - dots >= 1
+(this should be repeated multiple times. We will check this later)
+
+
+## Test cases for the toString
+testing not rolled and rolled
+In both cases create a new dice (no upper bound given)
+
+1. Roll the dice 
+- expects:
+    - to return dot count as text. Compare it with dots casted as string
+
+2. Not rolled
+- expects:
+    - to return the string "not rolled yest"
