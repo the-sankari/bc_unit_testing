@@ -1,0 +1,58 @@
+[
+    {
+      "carID": 1,
+      "model": "silver",
+      "price": 200,
+      "stars": "***",
+      "colors": ["blue", "white", "green"],
+      "info": {
+        "consumptionPer100km": 6,
+        "powerSource": "electricity",
+        "comments": "high quality"
+      }
+    },
+    {
+      "carID": 2,
+      "model": "XXL",
+      "price": 10,
+      "stars": "*****",
+      "colors": ["red", "white", "yellow"],
+      "info": {
+        "consumptionPer100km": 3,
+        "powerSource": "gas",
+        "comments": "high quality"
+      }
+    },
+    {
+      "carID": 3,
+      "model": "gold",
+      "price": 123,
+      "stars": "**",
+      "colors": ["white", "green", "red"],
+      "info": {
+        "consumptionPer100km": 7,
+        "powerSource": "hybrid",
+        "comments": "high quality"
+      }
+    },
+    {
+      "carID": 4,
+      "model": "VIP",
+      "price": 200,
+      "stars": "**",
+      "colors": ["green", "yellow", "orange"],
+      "info": {
+        "consumptionPer100km": 4,
+        "powerSource": "pushing",
+        "comments": "old model"
+      }
+    },
+    {
+      "carID": 5,
+      "model": "GT",
+      "price": 123,
+      "stars": "***",
+      "colors": ["blue", "black", "green"]
+    }
+  ]
+  

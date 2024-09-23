@@ -1,0 +1,15 @@
+{
+  "name": "sutra_dhar_car_2024_09_02_09_07_59_960",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CarsRegister.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
